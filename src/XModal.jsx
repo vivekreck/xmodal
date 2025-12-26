@@ -47,7 +47,7 @@ const XModal = () => {
     }
 
     if (!formData.email.includes("@")) {
-      alert("Invalid email. Please check your email address.");
+      alert("Invalid email");
       return;
     }
 
@@ -57,7 +57,7 @@ const XModal = () => {
     }
 
     if (formData.phone.length !== 10 || isNaN(formData.phone)) {
-      alert("Invalid phone number. Please enter a 10-digit phone number.");
+      alert("Invalid phone number");
       return;
     }
 
@@ -71,7 +71,7 @@ const XModal = () => {
     today.setHours(0, 0, 0, 0);
 
     if (selectedDate > today) {
-      alert("Invalid date of birth. Date of birth cannot be in the future.");
+      alert("Invalid date of birth");
       return;
     }
 
