@@ -36,13 +36,8 @@ const XModal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.username.trim()) {
-      alert("Please fill out this field.");
-      return;
-    }
-
     if (!formData.email.trim()) {
-      alert("Please fill out this field.");
+      alert("Invalid email");
       return;
     }
 
@@ -52,7 +47,7 @@ const XModal = () => {
     }
 
     if (!formData.phone.trim()) {
-      alert("Please fill out this field.");
+      alert("Invalid phone number");
       return;
     }
 
@@ -62,7 +57,7 @@ const XModal = () => {
     }
 
     if (!formData.dob) {
-      alert("Please fill out this field.");
+      alert("Invalid date of birth");
       return;
     }
 
@@ -75,6 +70,10 @@ const XModal = () => {
       return;
     }
 
+    if (!formData.username.trim()) {
+      alert("Invalid username");
+      return;
+    }
     closeModal();
   };
 
